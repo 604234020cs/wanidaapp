@@ -1,3 +1,4 @@
+import { JsonMenuPage } from './../pages/json-menu/json-menu';
 import { ScannerPage } from './../pages/scanner/scanner';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -28,7 +29,8 @@ export class MyApp {
       { title: 'List', component: ListPage, icon: 'book' },
       { title: 'Login', component: LoginPage, icon: 'git-network' },
       { title: 'Scanner', component: ScannerPage, icon: 'qr-scanner' },
-      { title: 'flashlight', component: FlashlightPage, icon: 'flash' }
+      { title: 'flashlight', component: FlashlightPage, icon: 'flash' },
+      { title: 'JsonMenu', component: JsonMenuPage, icon: 'List-box' }
       
 
     ];

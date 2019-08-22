@@ -1,3 +1,4 @@
+import { JsonMenuPage } from './../pages/json-menu/json-menu';
 import { FlashlightPage } from './../pages/flashlight/flashlight';
 import { Flashlight } from '@ionic-native/flashlight';
 import { ScannerPage } from './../pages/scanner/scanner';
@@ -19,7 +20,7 @@ import { SMS } from '@ionic-native/sms/ngx';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,LoginPage,ScannerPage,FlashlightPage
+    ListPage,LoginPage,ScannerPage,FlashlightPage,JsonMenuPage,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,7 @@ import { SMS } from '@ionic-native/sms/ngx';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,LoginPage,ScannerPage,FlashlightPage
+    ListPage,LoginPage,ScannerPage,FlashlightPage,JsonMenuPage,
   ],
   providers: [
     StatusBar, 
