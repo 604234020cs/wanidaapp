@@ -6,10 +6,32 @@
 -->
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
     <ion-title>PostJson</ion-title>
+  </button>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-item>
+    <ion-label floating>ชื่อ :</ion-label>
+    <ion-input type="text" [(ngModel)]= "name" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>นามสกุล :</ion-label>
+    <ion-input type="text"[(ngModel)]= "surname" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>อีเมล :</ion-label>
+    <ion-input type="text"[(ngModel)]= "email"></ion-input>
+  </ion-item>
+  <button ion-button block (click)="postJsonData(name, surname, email)">
+    <ion-icon name="body">
 
+    </ion-icon> &nbsp; &nbsp; ลงทะเบียน
+      </button>
+      {{returnMsg}}
+     
 </ion-content>
+

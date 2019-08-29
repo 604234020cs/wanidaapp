@@ -30,7 +30,7 @@ export class MyApp {
       { title: 'Login', component: LoginPage, icon: 'git-network' },
       { title: 'Scanner', component: ScannerPage, icon: 'qr-scanner' },
       { title: 'flashlight', component: FlashlightPage, icon: 'flash' },
-      { title: 'JsonMenu', component: JsonMenuPage, icon: 'List-box' }
+      { title: 'JsonMenu', component: JsonMenuPage, icon: 'book' }
       
 
     ];

@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 
 /**
  * Generated class for the PostJsonPage page.
@@ -15,11 +17,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PostJsonPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  returnMsg = "";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PostJsonPage');
   }
 
+  postJsonData(_name, _surname, _email) {
+    let jsondata;
+    jsondata = {
+      name: _name,
+      surname: _surname,
+      email: _email
+    };
+    console.log(jsondata);
+    let url = 'http://localhost/shop/ion-post-json-object.php';
+    this.http.post(url, jsondata).subscribe(
+      (data: any) => {
+        this.returnMsg = data.message;
+      }
+    );
+
+  }
 }

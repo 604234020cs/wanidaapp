@@ -1,3 +1,4 @@
+import {HttpClientModule} from '@angular/common/http';
 import { JsonMenuPage } from './../pages/json-menu/json-menu';
 import { FlashlightPage } from './../pages/flashlight/flashlight';
 import { Flashlight } from '@ionic-native/flashlight';
@@ -24,6 +25,7 @@ import { SMS } from '@ionic-native/sms/ngx';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
