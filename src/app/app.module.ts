@@ -15,13 +15,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { SMS } from '@ionic-native/sms/ngx';
+import { MoviePage } from '../pages/movie/movie';
+import { MovieProvider } from '../providers/movie/movie';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,LoginPage,ScannerPage,FlashlightPage,JsonMenuPage,
+    ListPage,LoginPage,ScannerPage,FlashlightPage,JsonMenuPage,MoviePage
   ],
   imports: [
     BrowserModule,
@@ -32,12 +34,13 @@ import { SMS } from '@ionic-native/sms/ngx';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,LoginPage,ScannerPage,FlashlightPage,JsonMenuPage,
+    ListPage,LoginPage,ScannerPage,FlashlightPage,JsonMenuPage,MoviePage
   ],
   providers: [
     StatusBar, 
-    SplashScreen, SMS,Flashlight,BarcodeScanner,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    SplashScreen, SMS,Flashlight,BarcodeScanner,MoviePage,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MovieProvider
   ]
 })
 export class AppModule {}
