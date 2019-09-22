@@ -31,7 +31,17 @@ export class NowPlayingPage {
   });
 
 }
-Moviedetail(nowmovie){
+  Moviedetail(nowmovie){
   this.navCtrl.push("MoviedetailPage",nowmovie);
+}
+onEvent(ev: any) {
+  let val = ev.target.value;
+  if(val.length !== 0){
+    this.nowmovie.searchMovie(val).subscribe(nowmovies => {
+      this.moviesArray = nowmovies['results'];
+    });
+  } else {
+    this.loadnowdata();
+  }
 }
 }

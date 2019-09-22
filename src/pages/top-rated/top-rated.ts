@@ -34,5 +34,14 @@ export class TopRatedPage {
   Moviedetail(topratedmovie){
     this.navCtrl.push("MoviedetailPage",topratedmovie);
   }
-
+  onEvent(ev: any) {
+    let val = ev.target.value;
+    if(val.length !== 0){
+      this.topratedmovie.searchMovie(val).subscribe(nowmovies => {
+        this.moviesArray = nowmovies['results'];
+      });
+    } else {
+      this.loadnowdata();
+    }
+  }
 }
