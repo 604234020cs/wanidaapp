@@ -1,6 +1,6 @@
+import { MovieProvider } from './../../providers/movie/movie';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MovieProvider } from '../../providers/movie/movie';
 
 /**
  * Generated class for the MoviedetailPage page.
@@ -15,7 +15,17 @@ import { MovieProvider } from '../../providers/movie/movie';
   templateUrl: 'moviedetail.html',
 })
 export class MoviedetailPage {
+
+  moviedata:any=[];
   detail: any = [];
+  movie: any;
+  movieDetails: any;
+  backdrop_path: any;
+  geners: any;
+  videos: any = [];
+  Budget: any;
+  status: any;
+  revenue: any;
   imgPath = 'https://image.tmdb.org/t/p/original/';
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public moviedetail: MovieProvider) {
@@ -26,8 +36,8 @@ export class MoviedetailPage {
     this.detail = this.navParams.data;
     console.log(this.detail);
   }
-  Moviedetail(nowmovie){
-    this.navCtrl.push("MoviedetailPage",nowmovie);
-  }
+  openVideo(key){
+    this.navCtrl.push("VideoPage",key);
+}
 
 }

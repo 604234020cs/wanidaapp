@@ -36,5 +36,8 @@ getTopratedMovie(){
     const url = this.baseURL + 'search/movie?query=' + query + '&' + this.apiKey;
     return this.http.get(url);
   }
-
+  getVideos(movieID){
+    const url = this.baseURL + 'movie/' + movieID + '/videos?' + this.apiKey + '&language=en-US';
+    return this.http.get(url);
+  }
 }
